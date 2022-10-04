@@ -1,7 +1,7 @@
 import { describe, it } from "@jest/globals";
 import * as request from "supertest";
 
-const gateway = "http://localhost:4000/dev";
+const gateway = "https://dv6mhrpwge.execute-api.us-east-1.amazonaws.com/dev";
 const server = request.agent(gateway);
 
 describe("create card integration tests", () => {
