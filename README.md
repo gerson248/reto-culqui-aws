@@ -4,8 +4,8 @@
 
 Depending on your preferred package manager, follow the instructions below to deploy your project.
 
-> **Requirements**: NodeJS
-> **Requirements**: Serverless, to install serverless globally execute the following `npm install -g serverless`
+- **Requirements**: NodeJS
+- **Requirements**: Serverless, to install serverless globally execute the following `npm install -g serverless`
 
 ### STEPS TO RUN THE PROJECT
 
