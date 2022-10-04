@@ -11,7 +11,7 @@ Depending on your preferred package manager, follow the instructions below to de
 
 - Run `npm i` to install the project dependencies
 - Run `npm run deploy` to deploy this stack to AWS
-- Run `npm run test:watch` to run the tests in observation mode
+- Run `npm run test` to run the tests in observation mode
 
 ### Locally
 
