@@ -35,7 +35,7 @@ export class CardController {
     }
   }
 
-  async getCard(event: any, result: Context) {
+  async getCard(event: any, context: Context) {
     if (event.headers['x-idempotence-key'] == undefined) {
       return formatJSONResponse({ message: 'No se encontro x-indempotence-key como header' }, 404);
     }
