@@ -1,5 +1,4 @@
-import * as mongoose from "mongoose";
+import * as mongoose from 'mongoose';
 
-export default mongoose.connect(
-  "mongodb+srv://admin:3TBLEe9w1UKH41pF@cluster0.lkkm95e.mongodb.net/?retryWrites=true&w=majority"
-);
+const DB_NAME = process.env.DB_NAME;
+export default mongoose.connect(DB_NAME, { keepAlive: true, keepAliveInitialDelay: 300000 });
