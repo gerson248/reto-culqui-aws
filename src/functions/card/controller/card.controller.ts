@@ -66,6 +66,7 @@ export class CardController {
       if (!result) {
         return formatJSONResponse({ message: 'La key ingresada no existe' }, 400);
       }
+      dummyCache[event.headers['x-idempotence-key']] = result;
       return formatJSONResponse(
         {
           message: 'Informacion de la tarjeta',
@@ -73,7 +74,6 @@ export class CardController {
         },
         200
       );
-      dummyCache[event.headers['x-idempotence-key']] = result;
     } catch (error) {
       return formatJSONResponse({ message: 'El token expiro', error: error.message }, 400);
     }
