@@ -73,6 +73,7 @@ export class CardController {
         },
         200
       );
+      dummyCache[event.headers['x-idempotence-key']] = result;
     } catch (error) {
       return formatJSONResponse({ message: 'El token expiro', error: error.message }, 400);
     }
