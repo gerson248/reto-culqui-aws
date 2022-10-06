@@ -9,6 +9,7 @@ describe('detail card integration tests', () => {
     server
       .get('/token')
       .set('Authorization', 'Bearer pk_test_xcJuDe2V3IgAYmEr')
+      .set('x-idempotence-key', Math.random().toString())
       .set('Accept', 'application/json')
       .query({
         token: 'xpgzy80uPo1qAHjk',
@@ -22,6 +23,7 @@ describe('detail card integration tests', () => {
     server
       .get('/token')
       .set('Authorization', 'Bearer pk_test_xcJuDe2V3IgAYmEr')
+      .set('x-idempotence-key', Math.random().toString())
       .set('Accept', 'application/json')
       .query({
         token: 'dsadsas',
@@ -35,6 +37,7 @@ describe('detail card integration tests', () => {
     server
       .get('/token')
       .set('Accept', 'application/json')
+      .set('x-idempotence-key', Math.random().toString())
       .query({
         token: 'xpgzy80uPo1qAHjk',
       })
@@ -47,6 +50,7 @@ describe('detail card integration tests', () => {
     server
       .get('/token')
       .set('Accept', 'application/json')
+      .set('x-idempotence-key', Math.random().toString())
       .query({
         token: 'xpgzy80uPo1qAHjk',
       })

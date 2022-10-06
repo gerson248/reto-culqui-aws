@@ -23,6 +23,7 @@ In order to test the functions locally, run the following command:
 
 > METHOD POST: http://localhost:4000/dev/card
 > HEADER: [ "Authorization":Bearer pk_test_xcJuDe2V3IgAYmEa]
+> HEADER: [ "x-idempotence-key":cdb63720-9628-5ef6-bbca-2e5ce609f11]
 > BODY= {
 >    "card_number": 12345678901234,
 >    "cvv": 132,
@@ -33,6 +34,7 @@ In order to test the functions locally, run the following command:
 
 > METHOD GET: http://localhost:4000/dev/token/{token}
 > HEADER: [ "Authorization":Bearer pk_test_xcJuDe2V3IgAYmEa]
+> HEADER: [ "x-idempotence-key":cdb63720-9628-5ef6-bbca-2e5ce609f11]
 > PARAMS= { "token": xcJuDe2V3IgAYmEr }
 
 ### Environment

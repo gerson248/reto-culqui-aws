@@ -9,6 +9,7 @@ describe("create card integration tests", () => {
     server
       .post("/card")
       .set("Authorization", "Bearer pk_test_xcJuDe2V3IgAYmEa")
+      .set('x-idempotence-key', Math.random().toString())
       .set("Accept", "application/json")
       .send({
         card_number: 12345678901234,
@@ -26,6 +27,7 @@ describe("create card integration tests", () => {
     server
       .post("/card")
       .set("Authorization", "Bearer pk_test_xcJuDe2V3IgAYmEr")
+      .set('x-idempotence-key', Math.random().toString())
       .set("Accept", "application/json")
       .send({})
       .expect("Content-Type", /json/)
@@ -37,6 +39,7 @@ describe("create card integration tests", () => {
     server
       .post("/card")
       .set("Accept", "application/json")
+      .set('x-idempotence-key', Math.random().toString())
       .send({
         card_number: 12345678901234,
         cvv: 132,
